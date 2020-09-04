@@ -16,5 +16,10 @@ pipeline {
                 sh 'npm config ls'
             }
         }
+        stage('Test') {
+            steps {
+                sh 'node main.js'
+            }
+        }
     }
 }
