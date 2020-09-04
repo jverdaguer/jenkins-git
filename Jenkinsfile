@@ -10,5 +10,14 @@ pipeline {
                 '''
             }
         }
+         stage('Run') {
+            steps {
+                sh 'node main.js'
+            }
+        }
+        
+        
+        
+        
     }
 }
