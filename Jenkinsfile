@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    tools {nodejs "Node14"}
     stages {
         stage('Build') {
             steps {
@@ -10,14 +11,10 @@ pipeline {
                 '''
             }
         }
-         stage('Run') {
+         stage('Config') {
             steps {
-                sh 'node main.js'
+                sh 'npm config ls'
             }
         }
-        
-        
-        
-        
     }
 }
